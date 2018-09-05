@@ -93,7 +93,7 @@ For the second part of the assignment you will need to work with bit masking to 
 
 You will need to separate the Red, Green, and Blue values, and determine which value is largest. Once you have determined the largest value, you must return the corresponding number for that color.
 
-For example, the value 0xFFF000000 would return 1 for Red, and 0x000FFF000 would return 2 for Green.
+For example, the value 0xFF0000 would return 1 for Red, and 0x00FF00 would return 2 for Green.
 
 If any two of the RGB colors are equal, the function should return 0.
 
@@ -105,7 +105,6 @@ If any two of the RGB colors are equal, the function should return 0.
 
 ## README
 
-You should have notice that part of this readme file has three sections titled:
 * KNOWN BUGS AND INCOMPLETE PARTS
 * REFERENCES
 * MISCELLANEOUS COMMENTS
@@ -114,75 +113,22 @@ Before your final submission, edit the content for each of these sections in thi
 
 ### Git
 
-In this and future programs, we will use Github Classroom repositories. You have already [forked](https://help.github.com/articles/fork-a-repo/) this repository when you accepted the emailed link. That makes a copy of the repository, free for you to make changes. Then you cloned your forked repository to get a working copy onto this machine.
-
-Now that we have made local changes to our working copy, let's [commit](https://git-scm.com/docs/git-commit) those changes to the repository:
+Below is a reminder of the commands you need to use to submit your program.
 
 :warning: *These commands all presume that your current working directory is within the directory tracked by `git`.*
 
 ```shell
-git commit -a -m "first commit"
-```
-
-The `-a` says that git should add all tracked files with changes to your commit, and the `-m` says the next string contains the commit message, which is required by git any time you make a commit.
-
-What about _untracked files_? Run the following commands:
-
-```shell
-touch info.txt
 git status
-```
-You'll notice that `git` tells us that `info.txt` is an _untracked file_. That means it's not being tracked by the repository. Let's fix that by [adding](https://git-scm.com/docs/git-add) it.
-
-```shell
-git add info.txt
-git commit -a -m "Added info.txt file"
-```
-:warning: *You* __must__ *add any new files you create to the repository with the `git add` command or they will not upload to the repo, and your code will not work.*
-
-Once we've made the commits for a given coding session, we need to add those to the repository by performing a [push](https://git-scm.com/docs/git-push):
-
-```shell
+git commit -a -m "commit message"
 git push
 ```
 
-Lastly, the next time we begin a coding session, we will need to [pull](https://git-scm.com/docs/git-pull) to ensure we have the most updated working copy.
-
-```shell
-git pull
-```
-:bulb: You should get a message that you are already up to date.
-
-This will allow you to keep your code in the lab and on your own computer synchronized if you want to work outside of lab.
-
-Lastly we are going to make our final commit. You will need to do this when your submission is ready for grading.
-
-```shell
-git commit -a -m "final commit message"
-git push
-```
-
-:bulb: You may get a message that there have not been any changes. That's okay, that just means you have already *commited* all changes.
-
-You can commit as often as you like, and revert your code to any previous commit using the **commit hash**. The commit hash is a long number that identifies a specific version of your code. I recommending making commits often with a comment describing the state of your code. To find your most recent commit hash, use the following command:
+To find your most recent commit hash, use the following command:
 
 ```shell
 git rev-parse HEAD
 ```    
-You should get a long, strange looking number:
-```
-35e27598324d8b4d7ddeb4d7aa8abe91c6263705
-```
 
-To complete your submission, you must copy and paste this number into mycourses. Go to MyCourses, select cs580u, and **Assignment Hash Submission**. Select Program 0, and where it says text submission, paste your commit hash. The TAs will only grade your submission that corresponds to the hash you submitted. You can update this as often as you like until the deadline.
-
-I strongly recommend making a submission early on, even if your assignment is not 100% working, to avoid late penalties. You can resubmit as many times as you like.
+To complete your submission, you must copy and paste this number into mycourses. Go to MyCourses, select cs580u, and **Assignment Hash Submission**.
 
 :warning: You __MUST__ submit the commit hash on mycourses before the deadline to be considered on time **even if your program is completely working before the deadline**. :warning:
-
-That's it! We've completed our work for this program. We will use this submission process for all subsequent programs.
-
-:bulb: Useful `git` references:
-- https://guides.github.com/introduction/flow/
-- https://help.github.com
-- https://git-scm.com/doc
