@@ -24,9 +24,14 @@
 
 ### Grading Rubric
 
-**_TOTAL: 10 points_**
+**_TOTAL: 20 points_**
+* **Part A: 10 points**
+    * Test #1: Next Multiple [1 pt]
+    * Test #2: Fahrenheit to Celsius [1 pt]
+    * Test #3: Casting [3 pt]
+    * Test #4: Fibonacci [5 pt]
 * **Part B: 8 points**
-    * TBD
+    * Test #5: Prominent Color [8 pt]
 * **Part C: 2 points**
     * Follows requested program structure and submission format
 
