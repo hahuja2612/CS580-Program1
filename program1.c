@@ -4,38 +4,86 @@
 
 //Function to calcualte next multiple of two given values
 int findNextMultiple(int number1, int number2){
-	//TODO
+
+	number1 = number1 + number2 - ( number1 % number2 );
+
+	return number1;
 }
+
 
 //Function to convert Fahrenheit to Celsuius
 float convertFtoC(float fahrenheit){
-	//TODO
-}
+	int celsius;
+	celsius = (fahrenheit-32) / 1.8 ;
+
+	return celsius;
+
+	}
 
 //Function to calculate fibonacci series for first 20 numbers
 int fibonacci(){
-	//TODO
-}
+
+	int num1=0, num2 = 1, sum=0,n=2;
+
+
+	while (n<20)
+	{
+	  sum = num1 + num2;
+	  num1 = num2;
+	  num2=sum;
+
+	  n++;
+
+	}
+
+	printf("\n resulting value 20th value of fibonacci series is %d", num2);
+    return sum;
+	}
 
 //Function to cast a long to an int
-int castToInt(long num){
-	//TODO
+	int castToInt(long num){
+	int x;
+	x= (int)num;
+	return x;
+
 }
 
 //Function to cast a long to an double
 double castToDouble(long num){
-	//TODO
+	double x;
+	x = (double)num;
+	return x;
 }
 
 //Function to cast a long to an char
 char castToChar(long num){
-	//TODO
+	char x;
+	x = (char)num;
+	return x;
 }
 
 
 int promColor(int rgb_val){
-    //TODO
-}
+int x=0;
+//int number = 0xABCDEF;
+int ef = rgb_val & 0x0000ff;
+int cd = (rgb_val>>8) & 0x0000ff;
+ int ab = (rgb_val>>16) & 0x0000ff;
+ //
+      if ((ab>cd)&&(ab>ef))
+      x=1;
+      else
+        if ((cd>ab)&&(cd>ef))
+      x=2;
+      else if ((ef>ab)&&(cd<ef))
+      x=3;
+      else x=0;
+
+
+      return x;
+
+ }
+
 
 //The main driver
 int main(){
@@ -88,6 +136,7 @@ int main(){
     printf("\n\t=========Test #4: Starting Fibonacci Tests===========\n");
     //finding fibonacci series for first 20 numbers
     assert(4181 == fibonacci());
+//fibonacc();
 
     printf("\n\t\t....Fibonacci Tests Passed\n");
 
